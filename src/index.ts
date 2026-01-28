@@ -5,6 +5,7 @@ import { scoreJoke, resetCurrentScoreJoke } from "./rating.js";
 import { pushJoke } from "./pushJokes.js";
 import { getWeather } from "./weather.js";
 import { printJoke, printWeather } from "./printDom.js";
+import { weatherCodeToEmoji } from "./weatherEmojis.js";
 
 const jokesContainer = document.getElementById("jokes-container") as HTMLDivElement;
 const buttonNextJoke = document.getElementById("next-joke");
@@ -49,8 +50,12 @@ const {latitude, longitude} = position.coords;
 
 const weather = await getWeather(latitude, longitude);
 const temp = weather.current_weather.temperature;
+const code = weather.current_weather.weathercode;
+const icon = weatherCodeToEmoji[code];
 
-printWeather(weatherContainer, temp);
+
+
+printWeather(weatherContainer, temp, icon);
 
 
 
