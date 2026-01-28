@@ -1,0 +1,1 @@
+export const reportAcudits : { joke: string; score?: number | null; date: string}[] = [];
