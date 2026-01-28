@@ -5,7 +5,7 @@ export function printJoke(container: HTMLDivElement, joke: string) {
 
 export function printWeather (container: HTMLDivElement, temp: number, icon: string | undefined){
 
-container!.innerHTML = `${icon} Temperatura: ${temp}º`
+container!.innerHTML = `${icon} | ${temp}º`
 
 
 }
