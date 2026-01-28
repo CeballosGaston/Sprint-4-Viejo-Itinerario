@@ -1,8 +1,7 @@
 import { callDadJoke, callChuckJoke } from "./jokes.js";
-import { setCurrentJoke, currentJoke } from "./jokeState.js";
-import { fetchApi } from "./apiService.js";
-import { apiDadJokes } from "./config.js";
-import { currentScoreJoke, scoreJoke, resetCurrentScoreJoke } from "./rating.js";
+import { setCurrentJoke} from "./jokeState.js";
+
+import { scoreJoke, resetCurrentScoreJoke } from "./rating.js";
 import { pushJoke } from "./pushJokes.js";
 import { getWeather } from "./weather.js";
 import { printJoke, printWeather } from "./printDom.js";
