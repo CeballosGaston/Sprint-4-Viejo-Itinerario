@@ -5,13 +5,14 @@ import { apiDadJokes } from "./config.js";
 import { currentScoreJoke, scoreJoke, resetCurrentScoreJoke } from "./rating.js";
 import { pushJoke } from "./pushJokes.js";
 import { getWeather } from "./weather.js";
+import { printJoke, printWeather } from "./printDom.js";
 
 const jokesContainer = document.getElementById("jokes-container") as HTMLDivElement;
 const buttonNextJoke = document.getElementById("next-joke");
 const buttonScoreOne = document.getElementById("score-one");
 const buttonScoreTwo = document.getElementById("score-two");
 const buttonScoreThree = document.getElementById("score-three");
-const weatherContainer = document.getElementById("weather-container")
+const weatherContainer = document.getElementById("weather-container") as HTMLDivElement;
 
 
 
@@ -30,9 +31,11 @@ buttonNextJoke?.addEventListener("click", async () => {
   setCurrentJoke(jokeText);
   pushJoke();
   resetCurrentScoreJoke();
-  
 
-  jokesContainer!.innerHTML = jokeText;
+  printJoke(jokesContainer, jokeText);
+
+ 
+  
 });
 
 
@@ -46,8 +49,13 @@ navigator.geolocation.getCurrentPosition(async (position) =>{
 const {latitude, longitude} = position.coords;
 
 const weather = await getWeather(latitude, longitude);
+const temp = weather.current_weather.temperature;
 
-weatherContainer!.innerHTML = `Temperatura: ${weather.current_weather.temperature}º`;
+printWeather(weatherContainer, temp);
+
+
+
+
 
 });
 
