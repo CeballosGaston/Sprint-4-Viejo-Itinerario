@@ -11,30 +11,54 @@ body {
   font-size: 16px;
 }
 
+.splash {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+
+  width: 500px;
+  height: 500px;
+
+  background:
+    repeating-conic-gradient(#4f46e5 0 3%, transparent 0 11%),
+    repeating-conic-gradient(transparent 0 5%, #4f46e5 0 7%) 50% / 60% 60%,
+    repeating-conic-gradient(transparent 0 7%, #4f46e5 0 9%) 50% / 70% 70%,
+    repeating-conic-gradient(transparent 0 11%, #4f46e5 0 13%) 50% / 80% 80%,
+    radial-gradient(#4f46e5 22%, transparent 0);
+
+  background-repeat: no-repeat;
+  filter: blur(10px);
+  opacity: 0.4;
+
+  z-index: -1;
+}
 
 
 .jokes-section {
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
   text-align: center;
   align-items: center;
   gap: 24px;
   padding: 16px;
+  z-index: 1;
 }
-
 
 .next-joke-button {
   padding: 12px 24px;
-  border-radius: 25px; 
+  border-radius: 25px;
   border: none;
   background-color: #4f46e5;
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .boton:hover {
@@ -45,9 +69,6 @@ body {
   transform: scale(0.95);
 }
 
-
-
-
 .rating-container {
   display: flex;
   gap: 16px;
@@ -56,11 +77,13 @@ body {
 }
 
 .emoji-btn {
-  font-size: 36px;          
+  font-size: 36px;
   background: none;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s ease, filter 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
 }
 
 .emoji-btn:hover {
