@@ -1,5 +1,6 @@
 😎 Jokes and Weather Project in TypeScript
 
+
 This project consists of a set of TypeScript functions for API calls and DOM manipulation.
 
 It is a practical exercise focused on reinforcing concepts such as:
@@ -16,6 +17,8 @@ API calls
 
 TypeScript fundamentals
 
+
+
 🧠 Project Goals
 
 Learn and practice TypeScript
@@ -27,6 +30,8 @@ Implement fetch functions with async/await
 Write and understand unit tests
 
 Validate expected results through automated testing
+
+
 
 🧪 Testing
 
@@ -43,6 +48,8 @@ Run the tests:
 
 npm run test
 
+
+
 🚀 Usage
 
 Open the app in your browser.
@@ -50,6 +57,8 @@ Open the app in your browser.
 Click the “Next Joke” button to fetch a random joke.
 
 Enjoy a clean and interactive experience.
+
+
 
 🛠️ Technologies Used
 
@@ -62,6 +71,9 @@ APIs
 Node.js
 
 Vitest
+
+
+
 
 🌟 Best Practices Applied
 
